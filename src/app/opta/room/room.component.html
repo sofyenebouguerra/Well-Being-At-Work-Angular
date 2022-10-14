@@ -1,0 +1,24 @@
+<app-header-admin></app-header-admin>
+<app-side-bar-admin></app-side-bar-admin>
+<div id="content-page" class="content-page">
+    <div class="container">
+       <div class="row">
+<div class="modal-body">
+    <div class="form-group">
+        <label for="room_name">Name</label>
+        <input type="text" class="form-control" id="room_name" required value="Room D" [(ngModel)]="room.name">
+    </div>
+    <div class="modal-footer">
+        <button routerLink="/opta" type="button" class="btn btn-default" data-dismiss="modal" >Cancel</button>
+        <button type="button" class="btn btn-primary" id="addRoomSubmitButton" (click)="add()" >Submit new room</button>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+

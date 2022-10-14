@@ -1,0 +1,120 @@
+<app-header-admin></app-header-admin>
+<app-side-bar-admin></app-side-bar-admin>
+
+<div id="content-page" class="content-page">
+    <div class="container">
+       <div class="row" >
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+
+<div class="col-md-10 ">
+    <div class="row ">
+        <div class="col-xl-3 col-lg-6">
+            <div class="card l-bg-orange-dark">
+                <div class="card-statistic-3 p-4">
+                    <div class="mb-4">
+                        <h5 class="card-title mb-0">Name : {{monitor.app.name}}</h5>
+                    </div>
+                  
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-6">
+            <div class="card l-bg-blue-dark">
+                <div class="card-statistic-3 p-4">
+                    <div class="mb-4">
+                        <h5 class="card-title mb-0"> {{monitor.app.description}}</h5>
+                    </div>
+                 
+                  
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-6">
+            <div class="card l-bg-green-dark">
+                <div class="card-statistic-3 p-4">
+                    <div class="mb-4">
+                        <h5 class="card-title mb-0">Version : {{monitor.app.version}} Ready to Upgrade .. </h5>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-6">
+            <div class="card l-bg-orange-dark">
+                <div class="card-statistic-3 p-4">
+                    <div class="mb-4">
+                        <h5 class="card-title mb-0">PING GET CLOSER SYSTEM  STATUS  : {{health.components.ping.status}}</h5>
+                    </div>
+                  
+                </div>
+            </div>
+        </div>
+        
+     
+    </div>
+</div>
+
+
+
+
+
+
+<div class="container">
+    <div class="text-center mb-2-8 mb-lg-6">
+        <h2 class="display-18 display-md-16 display-lg-14 font-weight-700"> <strong class="text-primary font-weight-700">Get Closer Monitoring  </strong></h2>
+        <span>Admin Control </span>
+    </div>
+    <div class="row align-items-center">
+        <div class="col-sm-6 col-lg-4 mb-2-9 mb-sm-0">
+            <div class="pr-md-3">
+                <div class="text-center text-sm-right mb-2-9">
+                    <div class="mb-4">
+                        <img src="https://static.vecteezy.com/system/resources/previews/005/355/713/original/abstract-wellness-logo-health-logo-vector.jpg" style="width: 100px;" alt="..." class="rounded-circle">
+                    </div>
+                    <h4 class="sub-info">SYSTEM STATUS :  {{health.status }}  </h4>
+
+                </div>
+                <br>
+                <BR>
+                <div class="text-center text-sm-right">
+                    <div class="mb-4">
+                        <img src="https://iconape.com/wp-content/png_logo_vector/database.png" style="width: 90px;" alt="..." class="rounded-circle">
+                    </div>
+                    <h4 class="sub-info">DATABASE : {{health.components.db.details.database}}</h4>
+                    <h6 class="display-30 mb-0">{{health.components.db.status}}</h6>
+                    <h6 class="display-30 mb-0">{{health.components.db.details.validationQuery}}</h6>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 d-none d-lg-block">
+            <div class="why-choose-center-image">
+                <img src="https://images.assetsdelivery.com/compings_v2/antonshaparenko/antonshaparenko2011/antonshaparenko201100005.jpg" alt="..." class="rounded-circle">
+            </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+            <div class="pl-md-3">
+                <div class="text-center text-sm-left mb-2-9">
+                    <div class="mb-4">
+                        <img src="https://images.vectorhq.com/images/previews/b92/disc-brake-logo-98585.png"  style="width: 80px;" alt="..." class="rounded-circle">
+                    </div>
+                    <h4 class="sub-info">DISQUE SPACE STATUS  : {{health.components.diskSpace.status}} </h4>
+                    <h6 class="display-30 mb-0">Total : {{health.components.diskSpace.details.total}}</h6>
+                    <h6 class="display-30 mb-0">Free : {{health.components.diskSpace.details.free}}</h6>
+                    <h6 class="display-30 mb-0">Threshold : {{health.components.diskSpace.details.threshold}}</h6>
+
+                </div>
+                <br>
+                
+                <div class="text-center text-sm-left">
+                    <div class="mb-4">
+                        <img src="https://img.bfmtv.com/c/630/420/0ae6/fcd6c9902738a457739dc00fbd2d.jpg" style="width: 90px;" alt="..." class="rounded-circle">
+                    </div>
+                    <h4 class="sub-info">MAIL STATUS : {{health.components.mail.status}}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

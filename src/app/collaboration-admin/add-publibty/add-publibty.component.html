@@ -1,0 +1,44 @@
+
+        <div id="post-modal-data" class="card card-block card-stretch card-height">
+            <br>
+            <h1>Add Collabor</h1>
+            <div>
+              <form #formpublicity="ngForm" >
+  
+                <div></div>
+                <mat-form-field class="example-full-width" appearance="fill">
+                  <mat-label>Name</mat-label>
+                  <input matInput placeholder="Ex. California" value="name" [(ngModel)]="publicity.title" name="title">
+                </mat-form-field>
+           
+            
+       
+                <mat-form-field class="example-full-width" appearance="fill">
+                  <mat-label>Description</mat-label>
+                  <textarea type="text" matInput placeholder="Ex. aaa" value="name" [(ngModel)]="publicity.description" name="description"></textarea>
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Date</mat-label>
+                    <mat-date-range-input [rangePicker]="picker">
+                      <input matStartDate placeholder="Start date" [(ngModel)]="publicity.starDatePub" name="starDatePub"  >
+                      <input matEndDate placeholder="End date" [(ngModel)]="publicity.endDatePub" name="endDatePub">
+                    </mat-date-range-input>
+                    <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-date-range-picker #picker></mat-date-range-picker>
+                  </mat-form-field> 
+            
+                <div class="input-group input-group-sm mb-6">
+                  <div class="input-group-prepend">
+                    <p>Picture</p>
+                    <input id="feed-upload-input-2" type="file" type="file" accept=".png, .jpg, .jpeg" (change)="onSelectFile($event)" onchange="readURL(this)"
+                      [(ngModel)]="publicity.picture"  name="picture" >
+                  </div>
+                </div>
+                <br>
+                <div class="col-lg-4 row m-0 p-0">
+                  <button type="button" class="btn btn-outline-primary" (click)="AddPublicity()"> Add publicity</button>
+                </div>
+              </form>
+            </div>
+          </div>

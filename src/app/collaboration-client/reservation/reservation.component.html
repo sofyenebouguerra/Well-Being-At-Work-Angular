@@ -1,0 +1,39 @@
+
+          <br>
+          <h1>Reservation</h1>
+          <div>
+            <form #formCollaboration="ngForm" >
+              <div>
+                <mat-form-field appearance="fill">
+                  <mat-label>Date</mat-label>
+                  <mat-date-range-input [rangePicker]="picker">
+                    <input matStartDate placeholder="Start date" [(ngModel)]="reservation.startDateRes" name="starDateOf" >
+                    <input matEndDate placeholder="End date" [(ngModel)]="reservation.endDateRes" name="endDateOf">
+                  </mat-date-range-input>
+                  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                  <mat-date-range-picker #picker></mat-date-range-picker>
+                </mat-form-field>
+            </div>
+            <div>
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Place nomber</mat-label>
+                <input type="nomber" matInput placeholder="Ex. 1" value="name" [(ngModel)]="reservation.nmPalce" name="email">
+              </mat-form-field>
+            </div>
+          <div>
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Localisation</mat-label>
+                <input type="text" matInput placeholder="Ex. 24 rue .." value="name" [(ngModel)]="reservation.localisation" name="phone">
+              </mat-form-field>
+            </div>
+       
+      
+          
+         
+              <br>
+              <div class="col-lg-4 row m-0 p-0">
+                <button type="button" class="btn btn-outline-primary" (click)="AddReservation()"> Add </button>
+              </div>
+            </form>
+          </div>
+  

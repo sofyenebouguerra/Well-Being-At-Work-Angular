@@ -1,0 +1,83 @@
+<div class="wrapper">
+    <section class="sign-in-page">
+        <div id="container-inside">
+            <div id="circle-small"></div>
+            <div id="circle-medium"></div>
+            <div id="circle-large"></div>
+            <div id="circle-xlarge"></div>
+            <div id="circle-xxlarge"></div>
+        </div>
+        <div class="container p-0">
+            <div class="row no-gutters">
+                <div class="col-md-6 text-center pt-5">
+                    <div class="sign-in-detail text-white">
+                        <a class="sign-in-logo mb-5" href="#"><img src="../assets/images/logo-full.png" class="img-fluid" alt="logo"></a>
+                        <div class="sign-slider overflow-hidden ">
+                            <ul  class="swiper-wrapper list-inline m-0 p-0 ">
+                                <li class="swiper-slide">
+                                    <img src="../assets/images/login/1.png" class="img-fluid mb-4" alt="logo">
+                                    <h4 class="mb-1 text-white">Find new friends</h4>
+                                    <p>It is a long established fact that a reader will be distracted by the readable content.</p>
+                                </li>
+                                <li class="swiper-slide">
+                                    <img src="../assets/images/login/2.png" class="img-fluid mb-4" alt="logo"> 
+                                    <h4 class="mb-1 text-white">Connect with the world</h4>
+                                    <p>It is a long established fact that a reader will be distracted by the readable content.</p>
+                                </li>
+                                <li class="swiper-slide">
+                                    <img src="../assets/images/login/3.png" class="img-fluid mb-4" alt="logo">
+                                    <h4 class="mb-1 text-white">Create new events</h4>
+                                    <p>It is a long established fact that a reader will be distracted by the readable content.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 bg-white pt-5 pt-5 pb-lg-0 pb-5">
+                    <div class="sign-in-from">
+                        <h1 class="mb-0">Sign Up</h1>
+<form [formGroup]="formuser"  (ngSubmit)="ajouter()">
+        <div class="form-group">
+          <label for="exampleFormControlInput1">name</label>
+          <input type="text" class="form-control" id="exampleFormControlInput1" formControlName="name"
+          [ngClass]="{'is-invalid':formuser.get('name')!.touched && !formuser.get('name')!.valid}">
+        </div>
+        <div class="form-group">
+              <label for="exampleFormControlInput1">username</label>
+              <input type="text" class="form-control" id="exampleFormControlInput1" formControlName="username">
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlInput1">email</label>
+              <input type="email" class="form-control" id="exampleFormControlInput1" formControlName="email">
+            </div>
+        <div class="form-group">
+          <label for="exampleFormControlSelect1">password</label>
+          <input type="password" class="form-control" id="exampleFormControlInput1" formControlName="password">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">phoneNumber</label>
+            <input type="number" class="form-control" id="exampleFormControlInput1" formControlName="phoneNumber">
+          </div>
+        <div class="form-group">
+              <label for="exampleFormControlFile1">choose file</label>
+              <input type="file" class="form-control-file" id="exampleFormControlFile1"
+              formControlName=picture
+              (change)=selectFile($event)>
+            </div>
+            <div>
+                  <img *ngIf="urlImg" [src]="urlImg" width="50" height="50">
+            </div>
+            <button class="btn btn-primary float-end" >Sign Up</button>
+      </form>
+    
+    
+    
+    
+
+
+
+      
+
+
+
+   

@@ -1,0 +1,33 @@
+<app-header-admin></app-header-admin>
+<app-side-bar-admin></app-side-bar-admin>
+<div id="content-page" class="content-page">
+    <div class="container">
+          <div class="row">
+             <div class="col-lg-12">
+                <div class="card card-block card-stretch card-height blog-list">
+                   <div class="card-body">
+                      <div class="row align-items-center">
+                         <div class="col-md-6">
+                            <div class="image-block">
+                              <img class="card-img-top" src="http://localhost:8085/Collaboration/Imgarticles/{{collaboration.idCollaboration}}" >
+                           </div>
+                         </div>
+                         <div class="col-md-6">
+
+                           <h5><b>  <i class="mb-2">{{collaboration.name}}</i></b></h5>
+                            <div class="blog-description p-2">
+                              
+                            
+                               <h5 class="mb-2">Email :{{collaboration.email}}</h5>
+                               <p>Description :{{collaboration.description}}</p> 
+                               <p>Town :{{collaboration.town}}</p> 
+                               <p>Phone :{{collaboration.phone}}</p>
+                                                          
+                               </div>
+                            </div>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+             </div>
+

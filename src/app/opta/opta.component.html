@@ -1,0 +1,84 @@
+<app-header-admin></app-header-admin>
+<app-side-bar-admin></app-side-bar-admin>
+<div style="margin-bottom: .5rem" class="center" >
+  
+  <button (click)="solve()"  type="button" class="btn btn-success">
+      <span class="fas fa-play"></span> Solve
+  </button>
+  <button (click)="stop()" type="button" class="btn btn-danger">
+      <span class="fas fa-stop"></span> Stop solving
+  </button>
+  <!--    <button type="button" class="float-right btn btn-warning"><span class="fas fa-stop"></span> Terminate</button>-->
+  <span id="score" class="score ml-2 align-middle font-weight-bold">Score: ? {{timeTable.score}}</span>
+  <span  class="score ml-2 align-middle font-weight-bold">/ Status: ? {{timeTable.solverStatus}}</span>
+ 
+</div>
+
+<div style="margin-bottom: .5rem ;margin-left: 510px;"   >
+  
+  <button routerLink="/comp" type="button" class="btn btn-secondary">
+    <span class="fas fa-refresh"></span> Add Competition 
+  </button>
+  <button routerLink="/Room" type="button" class="btn btn-secondary">
+    <span class="fas fa-refresh"></span> Add Room 
+  </button>
+  <button  routerLink="/timeslot" type="button" class="btn btn-secondary">
+    <span class="fas fa-refresh"></span> Add Timeslot 
+  </button>
+ 
+</div>
+
+
+
+
+<section class="wrapper">
+  <div class="container">
+  
+  <div class="row"  >
+ <div class="col-md-4" *ngFor="let p of timeTable.competitionList | paginate: { itemsPerPage: 6, currentPage: p } | filter:searchText" >
+   <div class="card text-white card-has-bg click-col" style="background-image:url('https://static.vecteezy.com/system/resources/previews/003/186/298/original/versus-background-sport-competition-vs-poster-game-fight-battle-vector.jpg');">
+         <img class="card-img d-none"  alt="Goverment Lorem Ipsum Sit Amet Consectetur dipisi?">
+        <div class="card-img-overlay d-flex flex-column" >
+         <div class="card-body">
+          <h6 class="card-title mt-0 "><a class="text-white" herf="#">Competition : {{p.subject}}</a></h6>
+          <h6 class="card-title mt-0 "><a class="text-white" herf="#">Referee : {{p.referee}}</a></h6>
+          <h6 class="card-title mt-0 "><a class="text-white" herf="#">Team : {{p.team}}</a></h6>
+          <hr style="width:50%;text-align:left;margin-left:0" style="color: RED;">    
+          <h6 class="card-title mt-0 "><a class="text-white" herf="#">DayOfWeek : {{p.timeslot.dayOfWeek }}</a></h6>
+          <h6 class="card-title mt-0 "><a class="text-white" herf="#">StartTime : {{p.timeslot.startTime }}</a></h6>
+          <h6 class="card-title mt-0 "><a class="text-white" herf="#">EndTime : {{p.timeslot.endTime }}</a></h6>
+          </div>
+          <div class="card-footer">
+           <div class="media">
+  <img class="mr-3 rounded-circle" src="https://images.assetsdelivery.com/compings_v2/putracetol/putracetol1706/putracetol170603632.jpg" alt="Generic placeholder image" style="max-width:50px">
+  <div class="media-body">
+    <h5 class="card-title mt-0  " style="color: red;"  ><a>Room  : {{p.room.name }}</a></h5>
+    <hr style="width:50%;text-align:left;margin-left:0" style="color: black;">    
+
+    
+    
+  </div>
+</div>
+          </div>
+          
+          
+        </div>
+      </div>
+    
+    
+    </div>
+    <pagination-controls (pageChange) ="p = $event" ></pagination-controls>
+
+  
+  
+</div>
+  
+</div>
+</section>
+
+
+
+
+
+
+

@@ -1,0 +1,65 @@
+<app-header-admin></app-header-admin>
+<app-side-bar-admin></app-side-bar-admin>
+<div id="content-page" class="content-page">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 row m-0 p-0">
+        <div id="post-modal-data" class="card card-block card-stretch card-height">
+          <br>
+          <h1>Edit Collabor</h1>
+          <form #formCollaboration="ngForm" >
+            <div>
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Name</mat-label>
+              <input matInput placeholder="Ex. California" value="name" [(ngModel)]="collaboration.name" name="name" [ngModelOptions]="{standalone: true}">
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Email</mat-label>
+              <input type="email" matInput placeholder="Ex. XXX@gmail.com" value="name" [(ngModel)]="collaboration.email" name="email" [ngModelOptions]="{standalone: true}">
+            </mat-form-field>
+          </div>
+        <div>
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Phone</mat-label>
+              <input type="number" matInput placeholder="Ex. 26158632" value="name" [(ngModel)]="collaboration.phone" name="phone" [ngModelOptions]="{standalone: true}">
+            </mat-form-field>
+          </div>
+          <div>
+
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Town</mat-label>
+              <input type="text" matInput placeholder="Ex. rue **" value="name" [(ngModel)]="collaboration.town" name="town" [ngModelOptions]="{standalone: true}">
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Description</mat-label>
+              <textarea type="text" matInput placeholder="Ex. aaa" value="name" [(ngModel)]="collaboration.description" name="town" [ngModelOptions]="{standalone: true}"></textarea>
+            </mat-form-field>
+          </div>
+        <div>
+            <div class="input-group input-group-sm mb-6">
+              <div class="input-group-prepend">
+                <p>Picture</p>
+                <input type="file" class="form-control" aria-label="Name" aria-describedby="inputGroup-sizing-sm"
+                  [(ngModel)]="collaboration.picture"  name="picture" [ngModelOptions]="{standalone: true}"> 
+              </div>
+            </div>
+          </div>
+            <br>
+            <div class="col-lg-4 row m-0 p-0">
+              <button type="button" class="btn btn-outline-primary" (click)="EditCollaboration()"> Edit collaboration</button>
+            </div>
+          </form>
+       
+          <div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

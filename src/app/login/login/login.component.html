@@ -1,0 +1,85 @@
+
+<div class="wrapper">
+    <section class="sign-in-page">
+        <div id="container-inside">
+            <div id="circle-small"></div>
+            <div id="circle-medium"></div>
+            <div id="circle-large"></div>
+            <div id="circle-xlarge"></div>
+            <div id="circle-xxlarge"></div>
+        </div>
+        <div class="container p-0">
+            <div class="row no-gutters">
+                <div class="col-md-6 text-center pt-5">
+                    <div class="sign-in-detail text-white">
+                        <a class="sign-in-logo mb-5" href="#"><img src="https://images.squarespace-cdn.com/content/v1/5de7eb3e2c6c176f8a724915/1576103106926-YQA8W485MRVOW1FXOZ75/Roots+to+Wellbeing+logo+designs+final-04.png" class="img-fluid" alt="logo" style="width: 600px; height: 50px;"></a>
+                        <div class="sign-slider overflow-hidden ">
+                            <ul  class="swiper-wrapper list-inline m-0 p-0 ">
+                                <li class="swiper-slide">
+                                    <img src="../assets/images/login/1.png" class="img-fluid mb-4" alt="logo">
+                                    <h4 class="mb-1 text-white">Find new friends</h4>
+                                    <p>It is a long established fact that a reader will be distracted by the readable content.</p>
+                                </li>
+                                <li class="swiper-slide">
+                                    <img src="../assets/images/login/2.png" class="img-fluid mb-4" alt="logo"> 
+                                    <h4 class="mb-1 text-white">Connect with the world</h4>
+                                    <p>It is a long established fact that a reader will be distracted by the readable content.</p>
+                                </li>
+                                <li class="swiper-slide">
+                                    <img src="../assets/images/login/3.png" class="img-fluid mb-4" alt="logo">
+                                    <h4 class="mb-1 text-white">Create new events</h4>
+                                    <p>It is a long established fact that a reader will be distracted by the readable content.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 bg-white pt-5 pt-5 pb-lg-0 pb-5">
+                    <div class="sign-in-from">
+                        <h1 class="mb-0">Sign in</h1>
+                        <p>Enter your email address and password to access admin panel.</p>
+
+
+                        
+                                <div  class="alert alert-danger" *ngIf="err==1">
+                                        <strong>Username or Password Incorrect ..</strong>
+                                       </div>
+                                   <form class="mt-4" >
+                                    
+                                           <div class="form-group">
+                                                <label >Username :</label>
+                                                <input type="text" name="username"
+                                                class="form-control"
+                                                [(ngModel)]="userr.username" >            
+                                            </div>
+                                            <div class="form-group">
+                                                <a href="#" routerLink="/forgot-password" class="float-end">Forgot password?</a>
+                                            </div> 
+                                            <div class="form-group">
+                                                <label >Password :</label>
+                                                <input type="password"    name="password" 
+                                                 [(ngModel)]="userr.password"   class="form-control">
+                                            </div>     
+                                                       
+                                           <div  class="row justify-content-md-center">
+                                                <button type="button" (click)="onLoggedin()"
+                                                class="btn btn-primary float-end" >Connexion</button>
+                                          </div>
+                                          <button style="text-decoration:none !important; font-weight:500; margin-top:35px; color:#fff;text-transform:uppercase; font-size:14px;padding:10px 24px;display:inline-block;border-radius:50px;"  class="btn btn-primary float-end" routerLink="/register" >Sign Up</button>
+                                          
+                                    </form>
+                                </div>
+                            </div>
+                         </div>
+                        
+                    </div>
+    </section>   
+      </div>
+
+
+
+
+
+
+
+      

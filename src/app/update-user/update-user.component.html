@@ -1,0 +1,57 @@
+<app-header-admin></app-header-admin>
+<app-side-bar-admin></app-side-bar-admin>
+
+<div id="content-page" class="content-page">
+  <div class="container">
+     <div class="row">
+<form [formGroup]="formuser"  (ngSubmit)="update()">
+  
+  <div class="col-xl-4">
+    <!-- Profile picture card-->
+    <div class="card mb-4 mb-xl-0">
+        <div class="card-header">Profile Picture</div>
+        <div class="card-body text-center">
+            <!-- Profile picture image-->
+            <img *ngIf="urlImg" [src]="urlImg" width="120" height="100" class="img-account-profile rounded-circle mb-2">
+            <!-- Profile picture help block-->
+            <!-- Profile picture upload button-->
+            <div class="form-group">
+              <input type="file" class="form-control-file" id="exampleFormControlFile1"
+              formControlName=picture
+              (change)=selectFile($event)>
+            </div>        
+          </div>
+    </div> </div>
+
+
+    <div class="form-group">
+      <label for="exampleFormControlInput1">name</label>
+      <input type="text" class="form-control" id="exampleFormControlInput1" formControlName="name"
+      [ngClass]="{'is-invalid':formuser.get('name')!.touched && !formuser.get('name')!.valid}">
+    </div>
+    <div class="form-group">
+          <label for="exampleFormControlInput1">username</label>
+          <input type="text" class="form-control" id="exampleFormControlInput1" formControlName="username">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">email</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" formControlName="email">
+        </div>
+    <div class="form-group">
+      <label for="exampleFormControlSelect1">password</label>
+      <input type="password" class="form-control" id="exampleFormControlInput1" formControlName="password">
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlSelect1">phoneNumber</label>
+        <input type="number" class="form-control" id="exampleFormControlInput1" formControlName="phoneNumber">
+      </div>
+    
+       
+        <button class="btn btn-primary float-end" >Update</button>
+  </form>
+
+
+
+
+
+  

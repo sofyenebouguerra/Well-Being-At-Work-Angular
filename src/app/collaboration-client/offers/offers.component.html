@@ -1,0 +1,105 @@
+<app-header></app-header>
+<app-side-bar></app-side-bar>
+<app-side-chat></app-side-chat>
+     
+            <!-- Page Content  -->
+  <div class="header-for-bg">
+      <div class="background-header position-relative">
+          <img src="../assets/images/page-img/profile-bg7.jpg" class="img-fluid w-100" alt="header-bg">
+          <div class="title-on-header">
+              <div class="data-block">
+                  <h2>Offers</h2>
+              </div>
+          </div>
+      </div>
+      </div>
+      <!-- Page Content  -->      
+       <div id="content-page" class="content-page">
+
+<div id="content-page" class="content-page">
+<div class="container">
+   <div class="row">
+    <div class="col-lg row m-0 p-0">
+      <div id="post-modal-data" class="card card-block card-stretch card-height">
+            <div class="header-title">
+               <br>
+               <h4 class="card-title">Collaborators</h4>
+            </div>
+         
+        
+         <div class="card-body" >
+            <div class="row">
+               <div class="col-sm-6 col-md-6 col-lg-3 mb-md-0 mb-2" *ngFor="let c of c  | paginate: { itemsPerPage: 4, currentPage: p }">
+                  <a ><img class="img-fluid rounded" src="http://localhost:8085/Collaboration/Imgarticles/{{c.idCollaboration}}" alt="category-image1" style="padding: 10px;"></a>
+               </div>
+
+            </div>
+            
+         </div>
+         <pagination-controls (pageChange) ="p = $event" ></pagination-controls>
+
+      </div>
+     </div>
+ 
+   <div class="col-lg-12">
+      <div class="card shadow-none p-0">
+         <div class="card-header d-flex justify-content-between rounded border-bottom-0">
+            <div class="header-title">
+               <h4 class="card-title">Offers</h4>
+            </div>
+         </div> 
+      </div>
+      <div class="row">                        
+       
+       
+         <div class="col-sm-6 col-md-6 col-lg-4" *ngFor="let o of o | paginate: { itemsPerPage: 6, currentPage: pa }" >
+            <div class="card card-block card-stretch card-height product">
+               <div class="card-body" >
+                  <div class="d-flex align-items-center justify-content-between pb-3">
+                     <div class="d-flex align-items-center"  >
+                        <img class="img-fluid rounded-circle avatar-30" src="http://localhost:8085/Collaboration/Imgarticles/{{o.collaboration.idCollaboration}}" alt="">
+                        <div class="ms-2">
+                           <p class="mb-0 line-height">Posted By</p>
+                           <h6><a href="#">{{o.collaboration.name}}</a></h6>
+                        </div>
+                     </div>
+                  
+                              </div>
+                  <div class="image-block position-relative">
+                     <img src="http://localhost:8085/Offer/Imgarticles1/{{o.idOffer}}" class="img-fluid w-100 rounded" alt="product-img">
+                     <div class="offer">
+                        <div class="offer-title">{{o.percentage}}%</div>
+                     </div>
+
+                  
+                    
+                     <h6 class="price"><span class="regular-price text-dark pr-2">${{o.prix}}</span>${{o.promotion}}</h6>
+                  </div>
+                  <div class="product-description mt-3">
+                     <h5 class="mb-1"><b>{{o.title}}</b></h5>
+                     <span class="categry text-primary ps-3 mb-2 position-relative">{{o.starDateOf}} - {{o.endDateOf}}</span>
+                  </div>
+                     <div>
+                     <p class="mb-0">{{o.nplaces}}</p>
+                       <button type="button" class="btn btn-outline-primary"  (click)="AddCollaboration()">
+                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
+                         <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001zm-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708l-1.585-1.585z"/>
+                       </svg>  Reservation
+                     </button>
+                    
+                    </div>
+
+                  </div>
+
+
+               </div>
+            </div>
+            <pagination-controls (pageChange) ="pa = $event" ></pagination-controls>
+
+         </div>
+         </div>
+      </div>
+   </div>
+</div>
+  
+  
